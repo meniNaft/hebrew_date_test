@@ -15,7 +15,7 @@ namespace Hebrew_date_test.Services
             Root = xDoc.Root ?? throw new Exception("no root element existing");
         }
 
-        public void AddQuery(Query newQuery)
+        public (bool IsSuccess, string Message) AddQuery(Query newQuery)
         {
             var day = new XElement("Day", newQuery.DayInWeek);
             var dayMonth = new XElement("DayMonth", newQuery.DayInMonth);
@@ -23,8 +23,17 @@ namespace Hebrew_date_test.Services
             var year = new XElement("Year", newQuery.Year);
             var result = new XElement("Result", newQuery.Result);
             var newItem = new XElement("Query", day, dayMonth, month, year, result);
-            Root.Add(newItem);
-            xDoc.Save(xmlPath);
+
+            try
+            {
+                Root.Add(newItem);
+                xDoc.Save(xmlPath);
+                return (true, "success");
+            }
+            catch (Exception e)
+            {
+                return (false, e.Message);
+            }
         }
     }
 }

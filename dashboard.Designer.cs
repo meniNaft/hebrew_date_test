@@ -117,7 +117,7 @@
             button_submit.Name = "button_submit";
             button_submit.Size = new Size(197, 54);
             button_submit.TabIndex = 13;
-            button_submit.Text = "קבל תאריך עברי";
+            button_submit.Text = "הוסף תאריך עברי";
             button_submit.UseVisualStyleBackColor = true;
             button_submit.Click += Button_submit_Click;
             // 
@@ -129,7 +129,7 @@
             comboBox_year.Size = new Size(132, 28);
             comboBox_year.TabIndex = 14;
             // 
-            // Form1
+            // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             Controls.Add(comboBox_dayInWeek);
             Controls.Add(label_day_in_month);
             Controls.Add(label_title);
-            Name = "Form1";
+            Name = "Dashboard";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
             Text = "Form1";
