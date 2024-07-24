@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Quesries>
+	<Query>
+		<Day></Day>
+		<DayMonth></DayMonth>
+		<Month></Month>
+		<Year></Year>
+		<Result></Result>
+	</Query>
+</Quesries>
